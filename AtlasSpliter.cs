@@ -21,8 +21,10 @@ class AtlasSpliter
         {
             //获取整图文件夹路径
             string activeDir = Path.GetDirectoryName(Apath);
+            //获取整图名称
+            string atlasName=Path.GetFileNameWithoutExtension(Apath);
             //获取资源信息
-            ArrayList ResInfoList = resourceInformation.getResInfoList(Jpath);
+            ArrayList ResInfoList = resourceInformation.getResInfoList(Jpath,atlasName);
             //遍历以创建文件夹
             for (int i = 0; i < ResInfoList.Count; i++)
             {
