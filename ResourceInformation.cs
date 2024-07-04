@@ -46,7 +46,7 @@ class ResourceInformation
                     //获取整图名称
                     string path_name=pathArray[pathArray.Count-1].ToString();
                     //如果整图名称和拖入的整图名称相匹配，则获取其id
-                    if (path_name == atlasName)
+                    if (path_name.ToLower() == atlasName.ToLower())
                     {
                         parent_id = item["id"].ToString();
                     }
