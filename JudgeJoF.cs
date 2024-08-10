@@ -13,8 +13,9 @@ class JudgeJoF
 	public string Jpath = null;
 	public string Apath = null;
 	//类型定义
-	public string typejson = "12313";
-	public string typeatlas = "13780";
+	public string typejson1 = "12313";
+    public string typejson2 = "12310";
+    public string typeatlas = "13780";
 	//创建btr读取文件类型实例
 	public BinaryTypeReader btr = new BinaryTypeReader();
 	//创建asp图集分割类型实例
@@ -26,7 +27,7 @@ class JudgeJoF
 		{
 			if (File.Exists(filepath))
 			{
-                if (btr.BinaryTypeRead(filepath) == typejson)
+                if (btr.BinaryTypeRead(filepath) == typejson1 || btr.BinaryTypeRead(filepath) == typejson2)
                 {
                     Console.WriteLine("已检测到为json文件");
                     this.Jpath = filepath;
@@ -64,7 +65,7 @@ class JudgeJoF
 		{
 			if (File.Exists(filepath))
 			{
-                if (btr.BinaryTypeRead(filepath) == typejson)
+                if (btr.BinaryTypeRead(filepath) == typejson1 || btr.BinaryTypeRead(filepath) == typejson2)
                 {
                     Console.WriteLine("已检测到为json文件，请再将整图拖入窗体，并按回车键");
                     this.Jpath = filepath;
@@ -103,7 +104,7 @@ class JudgeJoF
 		{
 			if (File.Exists(filepath))
 			{
-				if (btr.BinaryTypeRead(filepath) == typejson)
+				if (btr.BinaryTypeRead(filepath) == typejson1 || btr.BinaryTypeRead(filepath) == typejson2)
 				{
                     Console.WriteLine("已检测到为json文件，请再将整图拖入窗体，并按回车键");
                     this.Jpath = filepath;
