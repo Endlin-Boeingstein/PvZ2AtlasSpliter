@@ -33,11 +33,13 @@ class BitmapInformation
                 srcImageY = spriteInformation.y;
                 srcImageWidth = spriteInformation.width;
                 srcImageHeight = spriteInformation.height;
-                //2024年8月10日对其进行官方化修正
+                //2024年8月10日对其进行官方化修正//2025年1月6日禁用
+                /*
                 srcImageX -= 1;
                 srcImageY -= 1;
                 srcImageWidth += 2;
                 srcImageHeight += 2;
+                */
                 // 定义切割区域
                 Rectangle cropArea = new Rectangle(srcImageX, srcImageY, srcImageWidth, srcImageHeight);
                 //创建一个新的Bitmap用于存放切割后的图片
